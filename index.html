@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script>
+        /* .js activa los estados iniciales de animación. Si app.js no marca "is-ready" en 9 s, se liberan para que el sitio nunca quede oculto. */
+        document.documentElement.classList.add('js');
+        setTimeout(function () { var r = document.documentElement; if (!r.classList.contains('is-ready')) r.classList.remove('js'); }, 9000);
+    </script>
+    <noscript><style>.loader{display:none!important}</style></noscript>
+
+    <!-- ═══════════ SEO BÁSICO ═══════════ -->
+    <title>Re-Power | Baterías para Auto con Entrega e Instalación</title>
+    <meta name="description" content="Compra baterías para auto nuevas y seminuevas con garantía. Entrega a domicilio e instalación sin costo extra, atención rápida y diagnóstico de acumulador en sitio.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Re-Power">
+    <meta name="theme-color" content="#05080c">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- TODO (producción): reemplaza https://TU-DOMINIO.com por el dominio real del sitio en canonical, og:url, og:image y JSON-LD -->
+    <link rel="canonical" href="https://TU-DOMINIO.com/">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Re-Power">
+    <meta property="og:title" content="Re-Power | Baterías para auto con entrega e instalación a domicilio">
+    <meta property="og:description" content="Baterías nuevas y seminuevas con garantía. Te las llevamos e instalamos sin costo extra. Diagnóstico de acumulador en sitio.">
+    <meta property="og:url" content="https://TU-DOMINIO.com/">
+    <meta property="og:image" content="https://TU-DOMINIO.com/img/og-re-power.jpg">
+    <meta property="og:image:alt" content="Logotipo de Re-Power, regeneración de acumuladores y baterías">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Re-Power | Baterías para auto con entrega e instalación">
+    <meta name="twitter:description" content="Baterías nuevas y seminuevas con garantía. Entrega e instalación sin costo extra.">
+    <meta name="twitter:image" content="https://TU-DOMINIO.com/img/og-re-power.jpg">
+
+    <!-- Iconos -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <!-- Tipografías: Sora (display), Inter (texto), JetBrains Mono (HUD / datos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@500;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Datos estructurados (Negocio local + FAQ).
+         TODO (producción): agrega "telephone", "address" y "areaServed" cuando el cliente confirme sus datos reales. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["AutoPartsStore", "LocalBusiness"],
+          "@id": "https://TU-DOMINIO.com/#negocio",
+          "name": "Re-Power",
+          "alternateName": "Re-Power Regeneración de Acumuladores y Baterías",
+          "description": "Venta, entrega a domicilio e instalación de baterías para auto sin costo extra. Marcas de calidad y baterías seminuevas con garantía. Diagnóstico de acumulador en sitio.",
+          "url": "https://TU-DOMINIO.com/",
+          "image": "https://TU-DOMINIO.com/img/og-re-power.jpg",
+          "logo": "https://TU-DOMINIO.com/img/logo-re-power.png",
+          "knowsAbout": ["Baterías para auto", "Acumuladores", "Instalación de baterías", "Diagnóstico de acumuladores", "Baterías seminuevas"],
+          "makesOffer": [
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Baterías para auto de marcas de calidad" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Baterías seminuevas económicas con garantía" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entrega a domicilio sin costo extra" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalación de baterías sin costo extra" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diagnóstico de acumulador en sitio" } }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "¿Cuánto cuesta la entrega a domicilio y la instalación?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Nada extra. La entrega a domicilio y la instalación de tu batería no tienen costo adicional: solo pagas la batería que elijas." } },
+            { "@type": "Question", "name": "¿Qué marcas de baterías manejan?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Manejamos marcas de calidad como LTH, América Racing, Duralast, Exide y Cronos, además de baterías seminuevas económicas. La disponibilidad depende del modelo de tu auto: escríbenos y te confirmamos." } },
+            { "@type": "Question", "name": "¿Las baterías seminuevas tienen garantía?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Nuestras baterías seminuevas y económicas incluyen garantía para que ahorres sin arriesgarte. Al cotizar te explicamos las condiciones." } },
+            { "@type": "Question", "name": "¿Cómo sé si mi batería ya necesita cambio?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Las señales más comunes son que el auto tarda en encender, las luces bajan al arrancar, la batería se descarga de un día a otro o ya tiene varios años de uso. Puedes hacer el autodiagnóstico de esta página o pedir un diagnóstico de acumulador en sitio." } },
+            { "@type": "Question", "name": "¿Qué necesito para cotizar mi batería?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Solo la marca, el modelo y el año de tu auto. Con eso te recomendamos la batería correcta. Escríbenos por WhatsApp y te respondemos rápido." } },
+            { "@type": "Question", "name": "¿Atienden en toda la ciudad?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Damos atención rápida en la ciudad, con entrega e instalación a domicilio. Escríbenos tu ubicación por WhatsApp para confirmar la cobertura de tu zona." } },
+            { "@type": "Question", "name": "¿Hacen diagnóstico del acumulador en sitio?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Revisamos tu acumulador donde estés para confirmar su estado y decirte qué necesitas realmente, antes de que gastes de más." } }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+<!-- ═══════════ SPRITE DE ICONOS (inline, sin dependencias) ═══════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+        <symbol id="i-wa" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+        <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></symbol>
+        <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+        <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+        <symbol id="i-recycle" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="i-battery" viewBox="0 0 24 24"><path d="M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/><path d="M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1"/><path d="m11 7-3 5h4l-3 5"/><path d="M22 11v2"/></symbol>
+        <symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+        <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    </defs>
+</svg>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ═══════════ LOADER (spinner de carga) ═══════════ -->
+<div class="loader" id="loader" role="status" aria-live="polite" aria-label="Cargando Re-Power">
+    <div class="loader__bg" aria-hidden="true"></div>
+    <div class="loader__core">
+        <div class="loader__orb" aria-hidden="true">
+            <span class="loader__ring loader__ring--1"></span>
+            <span class="loader__ring loader__ring--2"></span>
+            <span class="loader__ring loader__ring--3"></span>
+            <span class="loader__spark"></span>
+            <img class="loader__icon" src="img/icono-re-power.png" width="238" height="213" alt="">
+        </div>
+        <p class="loader__brand">RE<span>-</span>POWER</p>
+        <div class="loader__cells" id="loader-cells" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <p class="loader__status"><span id="loader-label">Cargando energía</span> <b id="loader-pct">0%</b></p>
+    </div>
+</div>
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="site-header" id="site-header">
+    <div class="container site-header__bar">
+        <a class="brand" href="#inicio" aria-label="Re-Power, ir al inicio">
+            <img class="brand__icon" src="img/icono-re-power.png" width="238" height="213" alt="">
+            <span class="brand__text">
+                <span class="brand__name">RE-POWER</span>
+                <span class="brand__tag">Regeneración de baterías</span>
+            </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proceso">Cómo funciona</a></li>
+                <li><a href="#stock">Marcas</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a class="btn btn--primary btn--sm header-cta" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero cotizar una batería para mi auto.">
+            <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Quiero mi batería</span>
+        </a>
+
+        <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Menú móvil -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__bg" aria-hidden="true"></div>
+    <nav class="mobile-menu__nav" aria-label="Menú móvil">
+        <a href="#inicio"><small>01</small>Inicio</a>
+        <a href="#servicios"><small>02</small>Servicios</a>
+        <a href="#proceso"><small>03</small>Cómo funciona</a>
+        <a href="#stock"><small>04</small>Marcas y stock</a>
+        <a href="#promociones"><small>05</small>Promociones</a>
+        <a href="#preguntas"><small>06</small>Preguntas</a>
+        <a href="#contacto"><small>07</small>Contacto</a>
+    </nav>
+    <div class="mobile-menu__foot">
+        <a class="btn btn--primary btn--block" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, necesito una batería para mi auto. ¿Me ayudan?">
+            <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Necesito mi batería ahora</span>
+        </a>
+        <p>Entrega e instalación sin costo extra.</p>
+    </div>
+</div>
+
+<main id="contenido">
+
+<!-- ═══════════════════════════════════════════
+     01 · HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__bg" aria-hidden="true">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--2"></div>
+        <div class="aurora aurora--3"></div>
+        <div class="hero__grid"></div>
+        <canvas class="hero__canvas" id="energy-canvas"></canvas>
+        <div class="hero__beam"></div>
+        <div class="hero__vignette"></div>
+    </div>
+
+    <div class="container hero__inner">
+        <div class="hero__copy">
+            <p class="pill" data-hero-in style="--d:.15s">
+                <span class="pulse-dot"></span>
+                Venta · Entrega · Instalación de baterías para auto
+            </p>
+
+            <h1 class="hero__title" id="hero-title" data-split data-split-delay=".25">
+                Dale<br><span class="grad-text">Re-Power</span><br>a tu auto.
+            </h1>
+
+            <p class="hero__rotator" data-hero-in style="--d:.75s">
+                <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+                <span class="rotator" id="rotator">
+                    <span class="rotator__item is-active">Entrega a domicilio sin costo extra</span>
+                    <span class="rotator__item">Instalación sin costo extra</span>
+                    <span class="rotator__item">Marcas de calidad y seminuevas</span>
+                    <span class="rotator__item">Diagnóstico de acumulador en sitio</span>
+                </span>
+            </p>
+
+            <p class="hero__lead" data-hero-in style="--d:.9s">
+                Baterías nuevas y seminuevas <strong>con garantía</strong>. Te las llevamos, te las instalamos y tu auto vuelve a arrancar, <strong>sin costo extra</strong> por entrega ni instalación.
+            </p>
+
+            <div class="hero__ctas" data-hero-in style="--d:1.05s">
+                <a class="btn btn--primary btn--lg btn--pulse" href="https://wa.me/520000000000" data-wa data-magnetic
+                   data-wa-msg="Hola Re-Power, estoy listo para cambiar la batería de mi auto. ¿Me ayudan a cotizar?">
+                    <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span>Estoy listo, quiero mi batería</span>
+                    <svg class="icon btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+                <a class="btn btn--ghost btn--lg" href="#proceso">
+                    <span>Descubre cómo funciona</span>
+                </a>
+            </div>
+
+            <ul class="hero__trust" data-hero-in style="--d:1.2s" role="list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Atención rápida en la ciudad</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg>Diagnóstico en sitio</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Seminuevas con garantía</li>
+            </ul>
+        </div>
+
+        <!-- HUD: batería que se regenera (animada con JS + SVG) -->
+        <div class="hud" id="hud" aria-hidden="true" data-hero-in style="--d:.5s">
+            <div class="hud__stage" id="hud-stage">
+                <svg class="hud__svg" viewBox="0 0 480 480" focusable="false">
+                    <defs>
+                        <linearGradient id="gFill" x1="0" y1="1" x2="0" y2="0">
+                            <stop offset="0" stop-color="#0a9a63"/><stop offset=".5" stop-color="#34d33a"/><stop offset="1" stop-color="#b9f65c"/>
+                        </linearGradient>
+                        <linearGradient id="gBody" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#18242e"/><stop offset="1" stop-color="#070b10"/>
+                        </linearGradient>
+                        <linearGradient id="gRim" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#f1f5f8"/><stop offset=".45" stop-color="#6a7783"/><stop offset="1" stop-color="#d4dce3"/>
+                        </linearGradient>
+                        <linearGradient id="gBolt" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#aebac4"/>
+                        </linearGradient>
+                        <linearGradient id="gRing" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#a3f04b"/><stop offset=".6" stop-color="#14d1b0"/><stop offset="1" stop-color="#14d1b0" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="gShine" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                        </linearGradient>
+                        <radialGradient id="gHalo">
+                            <stop offset="0" stop-color="#4ade3a" stop-opacity=".38"/><stop offset=".6" stop-color="#14d1b0" stop-opacity=".1"/><stop offset="1" stop-color="#14d1b0" stop-opacity="0"/>
+                        </radialGradient>
+                        <clipPath id="clipChamber"><rect x="137" y="184" width="206" height="124" rx="10"/></clipPath>
+                        <clipPath id="clipBody"><rect x="125" y="172" width="230" height="148" rx="16"/></clipPath>
+                        <filter id="fGlow" x="-60%" y="-60%" width="220%" height="220%">
+                            <feGaussianBlur stdDeviation="7" result="b"/>
+                            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                    </defs>
+
+                    <circle class="hud__halo" cx="240" cy="240" r="232" fill="url(#gHalo)"/>
+
+                    <!-- anillos orbitales -->
+                    <circle class="hud__ring hud__ring--dots" cx="240" cy="240" r="214" fill="none" stroke="#14d1b0" stroke-opacity=".45" stroke-width="2" stroke-dasharray="1 11" stroke-linecap="round"/>
+                    <circle class="hud__ring hud__ring--arc" cx="240" cy="240" r="190" fill="none" stroke="url(#gRing)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="460 735"/>
+                    <circle cx="240" cy="240" r="166" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="1"/>
+
+                    <!-- flechas de reciclaje (guiño al logo) -->
+                    <g class="hud__ring hud__ring--arrows">
+                        <g transform="rotate(90 240 240)"><path d="M404 228 l14 12 -14 12" transform="translate(-4 0)" fill="none" stroke="#4ade3a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+                        <g transform="rotate(210 240 240)"><path d="M404 228 l14 12 -14 12" transform="translate(-4 0)" fill="none" stroke="#14d1b0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+                        <g transform="rotate(330 240 240)"><path d="M404 228 l14 12 -14 12" transform="translate(-4 0)" fill="none" stroke="#a3f04b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+                    </g>
+
+                    <g transform="translate(240 246) scale(1.18) translate(-240 -246)">
+                    <!-- terminales -->
+                    <rect x="160" y="153" width="34" height="21" rx="5" fill="url(#gRim)"/>
+                    <rect x="286" y="153" width="34" height="21" rx="5" fill="url(#gRim)"/>
+                    <path d="M170 143h14M177 136v14" stroke="#4ade3a" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+                    <path d="M296 143h14" stroke="#14d1b0" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+                    <!-- cuerpo -->
+                    <rect x="125" y="172" width="230" height="148" rx="16" fill="url(#gBody)" stroke="url(#gRim)" stroke-width="2"/>
+                    <rect x="137" y="184" width="206" height="124" rx="10" fill="#050a0e" stroke="#fff" stroke-opacity=".08"/>
+
+                    <!-- nivel de carga (lo mueve app.js) -->
+                    <g clip-path="url(#clipChamber)">
+                        <g id="hud-level" transform="translate(0 308)">
+                            <g class="hud__wave hud__wave--b"><path d="M-60 0 q15 -7 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 V200 H-60Z" fill="#14d1b0" fill-opacity=".45"/></g>
+                            <g class="hud__wave hud__wave--a"><path d="M-60 3 q15 -7 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 V200 H-60Z" fill="url(#gFill)"/></g>
+                        </g>
+                        <!-- separadores de celdas -->
+                        <path d="M171 184v124M206 184v124M240 184v124M274 184v124M309 184v124" stroke="#050a0e" stroke-opacity=".55" stroke-width="2"/>
+                    </g>
+
+                    <!-- rayo -->
+                    <path class="hud__bolt" filter="url(#fGlow)" fill="url(#gBolt)" d="M254 204 212 256h28l-10 36 46-56h-29z"/>
+
+                    <!-- brillo diagonal -->
+                    <g clip-path="url(#clipBody)"><g class="hud__shine"><rect x="40" y="150" width="90" height="200" fill="url(#gShine)" transform="skewX(-18)"/></g></g>
+                    </g>
+                </svg>
+
+                <div class="hud__chip hud__chip--a">
+                    <svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg>
+                    <span><b>Entrega a domicilio</b><small>Sin costo extra</small></span>
+                </div>
+                <div class="hud__chip hud__chip--b">
+                    <svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg>
+                    <span><b>Instalación</b><small>Sin costo extra</small></span>
+                </div>
+                <div class="hud__chip hud__chip--c">
+                    <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+                    <span><b>Seminuevas</b><small>Con garantía</small></span>
+                </div>
+            </div>
+
+            <dl class="hud__readout">
+                <div><dt>Voltaje</dt><dd><span id="hud-volt">11.6</span><small>V</small></dd></div>
+                <div><dt>Carga</dt><dd><span id="hud-pct">0</span><small>%</small></dd></div>
+                <div><dt>Estado</dt><dd id="hud-state" class="hud__state">Regenerando</dd></div>
+            </dl>
+        </div>
+    </div>
+
+    <a class="scroll-cue" href="#servicios" aria-label="Desliza para ver los servicios">
+        <span class="scroll-cue__mouse"><i></i></span>
+        <span>Desliza</span>
+    </a>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<section class="marquee" aria-label="Marcas y beneficios">
+    <div class="marquee__row">
+        <div class="marquee__track">
+            <ul class="marquee__group">
+                <li>LTH</li><li class="dot"></li><li>América Racing</li><li class="dot"></li><li>Duralast</li><li class="dot"></li><li>Exide</li><li class="dot"></li><li>Cronos</li><li class="dot"></li><li>Xtreme</li><li class="dot"></li>
+            </ul>
+            <ul class="marquee__group" aria-hidden="true">
+                <li>LTH</li><li class="dot"></li><li>América Racing</li><li class="dot"></li><li>Duralast</li><li class="dot"></li><li>Exide</li><li class="dot"></li><li>Cronos</li><li class="dot"></li><li>Xtreme</li><li class="dot"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="marquee__row marquee__row--rev">
+        <div class="marquee__track">
+            <ul class="marquee__group marquee__group--solid">
+                <li>Entrega a domicilio</li><li class="dot"></li><li>Instalación sin costo extra</li><li class="dot"></li><li>Seminuevas con garantía</li><li class="dot"></li><li>Diagnóstico en sitio</li><li class="dot"></li><li>Atención rápida</li><li class="dot"></li>
+            </ul>
+            <ul class="marquee__group marquee__group--solid" aria-hidden="true">
+                <li>Entrega a domicilio</li><li class="dot"></li><li>Instalación sin costo extra</li><li class="dot"></li><li>Seminuevas con garantía</li><li class="dot"></li><li>Diagnóstico en sitio</li><li class="dot"></li><li>Atención rápida</li><li class="dot"></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     02 · SERVICIOS (bento)
+═══════════════════════════════════════════ -->
+<section class="section" id="servicios" aria-labelledby="servicios-title">
+    <div class="container">
+        <header class="section-head" data-reveal>
+            <p class="eyebrow">Servicios</p>
+            <h2 class="section-title" id="servicios-title">Todo lo que tu batería necesita.<br><span class="grad-text">En un solo mensaje.</span></h2>
+            <p class="section-lead">Venta, entrega e instalación en un mismo servicio. Tú nos escribes; nosotros nos encargamos del resto.</p>
+        </header>
+
+        <div class="bento" data-stagger>
+            <!-- Venta -->
+            <article class="card bento__a spotlight" data-reveal>
+                <span class="card__num">01</span>
+                <div class="mini-cells" aria-hidden="true"><i style="--d:0s"></i><i style="--d:.5s"></i><i style="--d:1s"></i></div>
+                <h3>Venta de baterías para auto</h3>
+                <p>Marcas de calidad para cada tipo de auto. Dinos marca, modelo y año y te recomendamos la batería correcta, sin adivinar.</p>
+                <ul class="chips" role="list">
+                    <li>LTH</li><li>América Racing</li><li>Duralast</li><li>Exide</li><li>Cronos</li><li>Xtreme</li>
+                </ul>
+                <a class="card__link" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero cotizar una batería. Mi auto es: ">
+                    Quiero cotizar la mía <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+
+            <!-- Entrega -->
+            <article class="card bento__b spotlight" data-reveal>
+                <span class="card__num">02</span>
+                <svg class="route" viewBox="0 0 240 90" aria-hidden="true" focusable="false">
+                    <path class="route__bg" d="M14 70 C 60 8, 110 100, 170 38 S 214 22 226 20"/>
+                    <path class="route__flow" d="M14 70 C 60 8, 110 100, 170 38 S 214 22 226 20"/>
+                    <circle class="route__start" cx="14" cy="70" r="5"/>
+                    <circle class="route__ping" cx="14" cy="70" r="5"/>
+                    <g class="route__pin" transform="translate(214 4)"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 11 7 11s7-6 7-11a7 7 0 0 0-7-7Z" fill="#4ade3a"/><circle cx="12" cy="9" r="2.6" fill="#05080c"/></g>
+                </svg>
+                <h3>Entrega a domicilio</h3>
+                <p>Sin costo extra. Te llevamos la batería a tu casa, tu trabajo o a donde estés dentro de la ciudad.</p>
+                <a class="card__link" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero que me entreguen una batería a domicilio. Mi ubicación es: ">
+                    Quiero mi entrega <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+
+            <!-- Instalación -->
+            <article class="card bento__c spotlight" data-reveal>
+                <span class="card__num">03</span>
+                <svg class="gears" viewBox="0 0 120 70" aria-hidden="true" focusable="false">
+                    <g class="gear gear--a"><circle cx="38" cy="35" r="19" fill="none" stroke-width="9" stroke-dasharray="7.4 6.4"/><circle cx="38" cy="35" r="14" fill="none" stroke-width="2"/><circle cx="38" cy="35" r="4" fill="currentColor"/></g>
+                    <g class="gear gear--b"><circle cx="84" cy="30" r="13" fill="none" stroke-width="7" stroke-dasharray="5.1 4.4"/><circle cx="84" cy="30" r="9" fill="none" stroke-width="2"/><circle cx="84" cy="30" r="3" fill="currentColor"/></g>
+                </svg>
+                <h3>Instalación incluida</h3>
+                <p>Sin costo extra. La instalamos por ti para que lo único que hagas sea girar la llave.</p>
+                <a class="card__link" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero que me instalen la batería de mi auto.">
+                    Quiero que me la instalen <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+
+            <!-- Seminuevas -->
+            <article class="card bento__d spotlight" data-reveal>
+                <span class="card__num">04</span>
+                <div class="eco" aria-hidden="true">
+                    <svg class="icon eco__spin" aria-hidden="true"><use href="#i-recycle"/></svg>
+                    <svg class="icon eco__bolt" aria-hidden="true"><use href="#i-bolt"/></svg>
+                </div>
+                <h3>Seminuevas con garantía</h3>
+                <p>La opción económica sin sorpresas: baterías seminuevas respaldadas con garantía para resolver hoy sin vaciar la cartera.</p>
+                <a class="card__link" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, me interesa una batería seminueva con garantía. Mi auto es: ">
+                    Ver mi opción económica <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+
+            <!-- Diagnóstico -->
+            <article class="card bento__e spotlight" data-reveal>
+                <span class="card__num">05</span>
+                <svg class="ecg" viewBox="0 0 240 70" aria-hidden="true" focusable="false">
+                    <path class="ecg__bg" pathLength="1" d="M0 40 H52 l8 -6 8 6 H88 l8 -30 12 58 10 -34 6 6 H150 l8 -4 8 4 H240"/>
+                    <path class="ecg__live" pathLength="1" d="M0 40 H52 l8 -6 8 6 H88 l8 -30 12 58 10 -34 6 6 H150 l8 -4 8 4 H240"/>
+                </svg>
+                <h3>Diagnóstico de acumulador en sitio</h3>
+                <p>No cambies a ciegas. Revisamos tu acumulador donde estés y te decimos qué necesitas realmente.</p>
+                <a class="card__link" href="#diagnostico">
+                    Probar el autodiagnóstico <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+        </div>
+
+        <!-- Tira de valor -->
+        <ul class="value-strip" role="list" data-stagger>
+            <li data-reveal><strong class="grad-text"><span class="count" data-count="0" data-prefix="$">$0</span></strong><span>Costo extra por entrega a domicilio</span></li>
+            <li data-reveal><strong class="grad-text"><span class="count" data-count="0" data-prefix="$">$0</span></strong><span>Costo extra por la instalación</span></li>
+            <li data-reveal><strong class="grad-text"><span class="count" data-count="3">3</span>-en-1</strong><span>Venta, entrega e instalación</span></li>
+            <li data-reveal><strong class="grad-text"><span class="count" data-count="6">6</span>+</strong><span>Marcas de calidad en stock</span></li>
+        </ul>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     03 · AUTODIAGNÓSTICO (interactivo)
+═══════════════════════════════════════════ -->
+<section class="section section--tint" id="diagnostico" aria-labelledby="diag-title">
+    <div class="container diag">
+        <header class="diag__intro" data-reveal>
+            <p class="eyebrow">Autodiagnóstico</p>
+            <h2 class="section-title" id="diag-title">¿Tu batería te está <span class="grad-text">pidiendo ayuda?</span></h2>
+            <p class="section-lead">Marca lo que notas en tu auto y recibe una orientación al instante. Si hay señales, nosotros lo revisamos en sitio.</p>
+        </header>
+
+        <div class="diag__panel card" data-reveal style="--d:.1s">
+            <form class="diag__form" id="diag-form" aria-label="Autodiagnóstico de batería">
+                <fieldset>
+                    <legend class="sr-only">Síntomas que notas en tu auto</legend>
+                    <label class="symptom"><input type="checkbox" name="s" value="Tarda en arrancar" data-w="2"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Tarda en arrancar</span></label>
+                    <label class="symptom"><input type="checkbox" name="s" value="Hace clic pero no enciende" data-w="3"><span><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg>Hace “clic” pero no enciende</span></label>
+                    <label class="symptom"><input type="checkbox" name="s" value="Las luces bajan al arrancar" data-w="1"><span><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg>Las luces bajan al arrancar</span></label>
+                    <label class="symptom"><input type="checkbox" name="s" value="Se descarga de un día a otro" data-w="2"><span><svg class="icon" aria-hidden="true"><use href="#i-battery"/></svg>Se descarga de un día a otro</span></label>
+                    <label class="symptom"><input type="checkbox" name="s" value="Testigo de batería encendido" data-w="2"><span><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg>Testigo de batería encendido</span></label>
+                    <label class="symptom"><input type="checkbox" name="s" value="Polvo blanco o verdoso en las terminales" data-w="1"><span><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Polvo blanco/verdoso en terminales</span></label>
+                    <label class="symptom"><input type="checkbox" name="s" value="Tiene más de 3 años" data-w="1"><span><svg class="icon" aria-hidden="true"><use href="#i-recycle"/></svg>Tiene más de 3 años de uso</span></label>
+                </fieldset>
+            </form>
+
+            <div class="diag__result" aria-live="polite">
+                <div class="gauge" id="gauge" data-level="ok">
+                    <svg viewBox="0 0 240 140" aria-hidden="true" focusable="false">
+                        <defs>
+                            <linearGradient id="gGauge" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="#ff5d5d"/><stop offset=".45" stop-color="#ffc247"/><stop offset=".75" stop-color="#a3f04b"/><stop offset="1" stop-color="#4ade3a"/>
+                            </linearGradient>
+                        </defs>
+                        <path class="gauge__track" d="M20 120 A100 100 0 0 1 220 120" pathLength="100"/>
+                        <path class="gauge__arc" d="M20 120 A100 100 0 0 1 220 120" pathLength="100"/>
+                        <g class="gauge__ticks"><path d="M46 120H38M49.6 97.1L42 94.7M60.1 76.5L53.7 71.8M76.5 60.1L71.8 53.7M97.1 49.6L94.7 42M120 46V38M142.9 49.6L145.3 42M163.5 60.1L168.2 53.7M179.9 76.5L186.3 71.8M190.4 97.1L198 94.7M194 120H202"/></g>
+                        <g class="gauge__needle" id="gauge-needle">
+                            <path d="M120 120V44"/><circle cx="120" cy="120" r="9"/>
+                        </g>
+                    </svg>
+                    <div class="gauge__label"><small>Salud estimada</small><b id="gauge-pct">100%</b></div>
+                </div>
+
+                <div class="verdict" id="verdict" data-level="ok">
+                    <h3 id="verdict-title">Sin señales de alerta</h3>
+                    <p id="verdict-text">Marca los síntomas que notes y actualizamos la lectura al momento.</p>
+                </div>
+
+                <a class="btn btn--primary btn--block" id="diag-cta" href="https://wa.me/520000000000" data-wa data-magnetic data-wa-msg="Hola Re-Power, quiero que revisen la batería de mi auto.">
+                    <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span>Quiero que revisen mi batería</span>
+                </a>
+                <p class="diag__note">Lectura orientativa. El diagnóstico real se hace en sitio con equipo de medición.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     04 · CÓMO FUNCIONA (scrollytelling · tema claro)
+═══════════════════════════════════════════ -->
+<section class="section section--light" id="proceso" aria-labelledby="proceso-title" data-theme="light">
+    <div class="container process">
+        <div class="process__sticky">
+            <header class="section-head" data-reveal>
+                <p class="eyebrow">Así de simple</p>
+                <h2 class="section-title" id="proceso-title">De batería muerta a auto encendido en <span class="grad-text">4 pasos.</span></h2>
+                <p class="section-lead">Sin filas, sin traslados y sin complicarte. Mientras tú sigues con tu día, nosotros movemos todo.</p>
+            </header>
+
+            <div class="pbat" id="pbat" style="--p:.1" aria-hidden="true">
+                <div class="pbat__body">
+                    <div class="pbat__fill"></div>
+                    <div class="pbat__cells"><i></i><i></i><i></i><i></i><i></i></div>
+                    <svg class="pbat__bolt icon icon--fill" aria-hidden="true"><use href="#i-bolt"/></svg>
+                </div>
+                <div class="pbat__terms"><i></i><i></i></div>
+                <dl class="pbat__read">
+                    <div><dt>Voltaje</dt><dd><span id="pbat-volt">11.6</span> V</dd></div>
+                    <div><dt>Progreso</dt><dd><span id="pbat-pct">10</span>%</dd></div>
+                </dl>
+            </div>
+        </div>
+
+        <ol class="steps" id="steps">
+            <li class="step" data-step="1" data-reveal>
+                <span class="step__num">01</span>
+                <div class="step__body">
+                    <h3>Escríbenos por WhatsApp</h3>
+                    <p>Cuéntanos la marca, el modelo y el año de tu auto. Respondemos rápido y te decimos qué batería necesitas.</p>
+                </div>
+            </li>
+            <li class="step" data-step="2" data-reveal>
+                <span class="step__num">02</span>
+                <div class="step__body">
+                    <h3>Diagnóstico en sitio</h3>
+                    <p>Revisamos tu acumulador donde estés para confirmar su estado. Así sabes exactamente qué necesitas, ni más ni menos.</p>
+                </div>
+            </li>
+            <li class="step" data-step="3" data-reveal>
+                <span class="step__num">03</span>
+                <div class="step__body">
+                    <h3>Elige tu opción</h3>
+                    <p>Marca de calidad o seminueva económica con garantía. Tú decides según tu presupuesto y lo que busques.</p>
+                </div>
+            </li>
+            <li class="step" data-step="4" data-reveal>
+                <span class="step__num">04</span>
+                <div class="step__body">
+                    <h3>Entrega e instalación, sin costo extra</h3>
+                    <p>Te llevamos la batería, te la instalamos y tu auto vuelve a arrancar. Así de fácil.</p>
+                    <a class="btn btn--dark" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero empezar: necesito entrega e instalación de una batería para mi auto.">
+                        <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+                        <span>Empezar ahora por WhatsApp</span>
+                    </a>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     05 · STOCK REAL
+═══════════════════════════════════════════ -->
+<section class="section" id="stock" aria-labelledby="stock-title">
+    <div class="container stock">
+        <div class="stock__copy">
+            <header class="section-head" data-reveal>
+                <p class="eyebrow">Stock real</p>
+                <h2 class="section-title" id="stock-title">Marcas que conoces. <span class="grad-text">Opciones para cada bolsillo.</span></h2>
+                <p class="section-lead">Estantes llenos de baterías listas para tu auto: marcas de calidad y seminuevas económicas con garantía. Dinos cuál es tu auto y te decimos cuál te conviene.</p>
+            </header>
+            <ul class="stock__list" role="list" data-stagger>
+                <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Baterías nuevas de marcas de calidad</li>
+                <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Seminuevas económicas con garantía</li>
+                <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Te ayudamos a elegir la compatible con tu auto</li>
+            </ul>
+            <div data-reveal style="--d:.2s">
+                <a class="btn btn--primary btn--lg" href="https://wa.me/520000000000" data-wa data-magnetic
+                   data-wa-msg="Hola Re-Power, quiero ver qué baterías tienen disponibles para mi auto. Mi auto es: ">
+                    <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span>Quiero ver mi opción disponible</span>
+                    <svg class="icon btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="stock__media">
+            <figure class="shot shot--tall" data-reveal="mask" data-parallax="0.06">
+                <img src="img/stock-baterias-estante-1.jpg" width="416" height="736" loading="lazy" decoding="async"
+                     alt="Estante con baterías para auto de varias marcas: Duralast, América Racing, Exide y más">
+                <span class="shot__scan" aria-hidden="true"></span>
+                <figcaption class="shot__tag"><i></i>En stock</figcaption>
+            </figure>
+            <figure class="shot shot--wide" data-reveal="mask" style="--d:.15s" data-parallax="-0.04">
+                <img src="img/stock-baterias-estante-2.jpg" width="640" height="480" loading="lazy" decoding="async"
+                     alt="Baterías para auto LTH, América Racing y Cronos acomodadas en estantes listas para entrega">
+                <span class="shot__scan" aria-hidden="true"></span>
+            </figure>
+            <div class="shot-stat glass" data-reveal style="--d:.3s">
+                <strong class="grad-text">6+</strong>
+                <span>marcas de calidad<br>listas para tu auto</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     06 · PROMOCIONES (tema claro)
+═══════════════════════════════════════════ -->
+<section class="section section--light" id="promociones" aria-labelledby="promo-title" data-theme="light">
+    <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Promociones</p>
+            <h2 class="section-title" id="promo-title">Ahorra desde <span class="grad-text">el primer mensaje.</span></h2>
+            <p class="section-lead">Lo que otros cobran aparte, aquí ya viene incluido.</p>
+        </header>
+
+        <div class="promos" data-stagger>
+            <article class="promo" data-reveal>
+                <span class="promo__tag">Sin costo extra</span>
+                <svg class="icon promo__icon" aria-hidden="true"><use href="#i-truck"/></svg>
+                <h3>Entrega a domicilio</h3>
+                <p>Tu batería llega a ti. Cero traslados, cero filas y cero costo extra por la entrega.</p>
+                <a class="promo__link" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero aprovechar la entrega a domicilio sin costo extra.">
+                    Aprovechar esta promo <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+            <article class="promo" data-reveal>
+                <span class="promo__tag">Sin costo extra</span>
+                <svg class="icon promo__icon" aria-hidden="true"><use href="#i-wrench"/></svg>
+                <h3>Instalación incluida</h3>
+                <p>Pagas la batería, no la mano de obra. La instalamos por ti sin cobrarte un peso adicional.</p>
+                <a class="promo__link" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero aprovechar la instalación sin costo extra.">
+                    Quiero mi instalación <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+            <article class="promo" data-reveal>
+                <span class="promo__tag">Con garantía</span>
+                <svg class="icon promo__icon" aria-hidden="true"><use href="#i-recycle"/></svg>
+                <h3>Seminuevas económicas</h3>
+                <p>La forma más inteligente de salir del apuro: batería seminueva a mejor precio y respaldada con garantía.</p>
+                <a class="promo__link" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, me interesa una batería seminueva económica con garantía.">
+                    Ver precios por WhatsApp <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+
+            <aside class="promo-banner" data-reveal>
+                <div>
+                    <h3>¿Buscas la promoción vigente?</h3>
+                    <p>Pregúntanos hoy por las promociones del momento y te respondemos por WhatsApp.</p>
+                </div>
+                <a class="btn btn--primary btn--lg" href="https://wa.me/520000000000" data-wa data-magnetic data-wa-msg="Hola Re-Power, ¿qué promociones tienen vigentes en baterías?">
+                    <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span>Quiero ver las promociones</span>
+                </a>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     07 · NUEVA VS SEMINUEVA
+═══════════════════════════════════════════ -->
+<section class="section" id="elige" aria-labelledby="elige-title">
+    <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+            <p class="eyebrow">Nueva o seminueva</p>
+            <h2 class="section-title" id="elige-title">Elige la que <span class="grad-text">va contigo.</span></h2>
+            <p class="section-lead">Dos caminos, el mismo resultado: tu auto encendiendo a la primera. Tú decides según lo que buscas.</p>
+        </header>
+
+        <div class="compare" data-reveal style="--d:.1s">
+            <div class="seg" role="tablist" aria-label="Tipo de batería" id="seg" style="--i:0">
+                <span class="seg__thumb" aria-hidden="true"></span>
+                <button class="seg__btn is-active" role="tab" id="tab-nueva" aria-selected="true" aria-controls="panel-nueva" type="button">Marca de calidad</button>
+                <button class="seg__btn" role="tab" id="tab-semi" aria-selected="false" aria-controls="panel-semi" tabindex="-1" type="button">Seminueva económica</button>
+            </div>
+
+            <div class="compare__panels">
+                <div class="compare__panel is-active" role="tabpanel" id="panel-nueva" aria-labelledby="tab-nueva">
+                    <div class="compare__head">
+                        <svg class="icon" aria-hidden="true"><use href="#i-battery"/></svg>
+                        <div><h3>Batería de marca de calidad</h3><p>Ideal si quieres tranquilidad a largo plazo.</p></div>
+                    </div>
+                    <ul role="list">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Marcas reconocidas: LTH, América Racing, Duralast, Exide y más</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Pensada para durar: perfecta si piensas conservar tu auto</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Rendimiento confiable en cada arranque</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Te asesoramos el modelo exacto para tu auto</li>
+                    </ul>
+                    <a class="btn btn--primary" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero cotizar una batería nueva de marca de calidad. Mi auto es: ">
+                        <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg><span>Quiero mi batería de marca</span>
+                    </a>
+                </div>
+
+                <div class="compare__panel" role="tabpanel" id="panel-semi" aria-labelledby="tab-semi" hidden>
+                    <div class="compare__head">
+                        <svg class="icon" aria-hidden="true"><use href="#i-recycle"/></svg>
+                        <div><h3>Batería seminueva económica</h3><p>Ideal si quieres resolver hoy al mejor precio.</p></div>
+                    </div>
+                    <ul role="list">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Precio más accesible, sin dejar de lado la garantía</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Con garantía: ahorras sin arriesgarte</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Solución rápida cuando necesitas salir del apuro</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Segunda vida para el acumulador: mejor para tu bolsillo y para el planeta</li>
+                    </ul>
+                    <a class="btn btn--primary" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero cotizar una batería seminueva económica con garantía. Mi auto es: ">
+                        <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg><span>Quiero la opción económica</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     08 · PREGUNTAS FRECUENTES (tema claro)
+═══════════════════════════════════════════ -->
+<section class="section section--light" id="preguntas" aria-labelledby="faq-title" data-theme="light">
+    <div class="container faq">
+        <header class="section-head" data-reveal>
+            <p class="eyebrow">Preguntas frecuentes</p>
+            <h2 class="section-title" id="faq-title">Lo que todos nos <span class="grad-text">preguntan.</span></h2>
+            <p class="section-lead">¿No encuentras tu duda? Escríbenos y te respondemos en minutos.</p>
+            <a class="btn btn--dark" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, tengo una pregunta sobre baterías.">
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg><span>Resolver mi duda por WhatsApp</span>
+            </a>
+        </header>
+
+        <div class="faq__list" data-stagger>
+            <details class="faq__item" name="faq" data-reveal open>
+                <summary><span>¿Cuánto cuesta la entrega a domicilio y la instalación?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+                <div class="faq__body"><p>Nada extra. La entrega a domicilio y la instalación de tu batería no tienen costo adicional: solo pagas la batería que elijas.</p></div>
+            </details>
+            <details class="faq__item" name="faq" data-reveal>
+                <summary><span>¿Qué marcas de baterías manejan?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+                <div class="faq__body"><p>Manejamos marcas de calidad como LTH, América Racing, Duralast, Exide y Cronos, además de baterías seminuevas económicas. La disponibilidad depende del modelo de tu auto: escríbenos y te confirmamos.</p></div>
+            </details>
+            <details class="faq__item" name="faq" data-reveal>
+                <summary><span>¿Las baterías seminuevas tienen garantía?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+                <div class="faq__body"><p>Sí. Nuestras baterías seminuevas y económicas incluyen garantía para que ahorres sin arriesgarte. Al cotizar te explicamos las condiciones.</p></div>
+            </details>
+            <details class="faq__item" name="faq" data-reveal>
+                <summary><span>¿Cómo sé si mi batería ya necesita cambio?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+                <div class="faq__body"><p>Las señales más comunes son que el auto tarda en encender, las luces bajan al arrancar, la batería se descarga de un día a otro o ya tiene varios años de uso. Puedes hacer el <a href="#diagnostico">autodiagnóstico de esta página</a> o pedir un diagnóstico de acumulador en sitio.</p></div>
+            </details>
+            <details class="faq__item" name="faq" data-reveal>
+                <summary><span>¿Qué necesito para cotizar mi batería?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+                <div class="faq__body"><p>Solo la marca, el modelo y el año de tu auto. Con eso te recomendamos la batería correcta. Escríbenos por WhatsApp y te respondemos rápido.</p></div>
+            </details>
+            <details class="faq__item" name="faq" data-reveal>
+                <summary><span>¿Atienden en toda la ciudad?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+                <div class="faq__body"><p>Damos atención rápida en la ciudad, con entrega e instalación a domicilio. Escríbenos tu ubicación por WhatsApp para confirmar la cobertura de tu zona.</p></div>
+            </details>
+            <details class="faq__item" name="faq" data-reveal>
+                <summary><span>¿Hacen diagnóstico del acumulador en sitio?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+                <div class="faq__body"><p>Sí. Revisamos tu acumulador donde estés para confirmar su estado y decirte qué necesitas realmente, antes de que gastes de más.</p></div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     09 · CTA FINAL
+═══════════════════════════════════════════ -->
+<section class="cta" id="cta" aria-labelledby="cta-title">
+    <div class="cta__bg" aria-hidden="true">
+        <span class="cta__orb cta__orb--1"></span>
+        <span class="cta__orb cta__orb--2"></span>
+        <span class="cta__word">RE-POWER</span>
+    </div>
+    <div class="container cta__inner" data-reveal>
+        <p class="eyebrow eyebrow--center">¿Tu auto no arranca?</p>
+        <h2 class="cta__title" id="cta-title">Resolvámoslo <span class="grad-text">hoy mismo.</span></h2>
+        <p class="cta__lead">Un mensaje y nos encargamos de todo: la batería, la entrega y la instalación. Tú solo gira la llave.</p>
+        <div class="cta__btns">
+            <a class="btn btn--primary btn--xl btn--pulse" href="https://wa.me/520000000000" data-wa data-magnetic
+               data-wa-msg="Hola Re-Power, necesito una batería hoy. Mi auto es: ">
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span>Sí, necesito mi batería hoy</span>
+                <svg class="icon btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--xl" href="#contacto"><span>Prefiero dejar mis datos</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     10 · CONTACTO
+═══════════════════════════════════════════ -->
+<section class="section" id="contacto" aria-labelledby="contacto-title">
+    <div class="container contact">
+        <div class="contact__info">
+            <header class="section-head" data-reveal>
+                <p class="eyebrow">Contacto</p>
+                <h2 class="section-title" id="contacto-title">Cuéntanos de tu auto. <span class="grad-text">Nosotros hacemos el resto.</span></h2>
+                <p class="section-lead">Llena el formulario y te abrimos un chat de WhatsApp con tu mensaje ya listo. Sin llamadas largas, sin vueltas.</p>
+            </header>
+
+            <ul class="contact__list" data-stagger role="list">
+                <li class="glass" data-reveal>
+                    <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <div><b>WhatsApp</b><a href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero información." data-phone-display>+52 000 000 0000</a></div>
+                </li>
+                <li class="glass" data-reveal>
+                    <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                    <div><b>Cobertura</b><span>Atención rápida en la ciudad. Confirma tu zona por WhatsApp.</span></div>
+                </li>
+                <li class="glass" data-reveal>
+                    <svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg>
+                    <div><b>Servicio</b><span>Entrega a domicilio e instalación sin costo extra.</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact__formwrap card" data-reveal style="--d:.15s">
+            <h3>Cotiza tu batería</h3>
+            <p class="contact__sub">Te respondemos por WhatsApp en cuanto lo recibimos.</p>
+
+            <form id="quote-form" novalidate>
+                <div class="field">
+                    <label for="f-name">Tu nombre</label>
+                    <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Ej. Juan Pérez" required>
+                    <span class="field__error" id="e-name" role="alert"></span>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="f-phone">Teléfono <em>(opcional)</em></label>
+                        <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ej. 555 123 4567">
+                        <span class="field__error" id="e-phone" role="alert"></span>
+                    </div>
+                    <div class="field">
+                        <label for="f-year">Año del auto <em>(opcional)</em></label>
+                        <input id="f-year" name="year" type="text" inputmode="numeric" maxlength="4" placeholder="Ej. 2018">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="f-car">Marca y modelo de tu auto</label>
+                    <input id="f-car" name="car" type="text" placeholder="Ej. Nissan Versa" required>
+                    <span class="field__error" id="e-car" role="alert"></span>
+                </div>
+
+                <div class="field">
+                    <label for="f-need">¿Qué necesitas?</label>
+                    <div class="select">
+                        <select id="f-need" name="need" required>
+                            <option value="" selected disabled>Elige una opción</option>
+                            <option>Batería nueva de marca de calidad</option>
+                            <option>Batería seminueva económica con garantía</option>
+                            <option>Diagnóstico de mi acumulador en sitio</option>
+                            <option>Entrega e instalación a domicilio</option>
+                            <option>No estoy seguro, necesito asesoría</option>
+                        </select>
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                    </div>
+                    <span class="field__error" id="e-need" role="alert"></span>
+                </div>
+
+                <div class="field">
+                    <label for="f-msg">Algo más que debamos saber <em>(opcional)</em></label>
+                    <textarea id="f-msg" name="msg" rows="3" placeholder="Ej. Mi auto no enciende y estoy en la colonia…"></textarea>
+                </div>
+
+                <button class="btn btn--primary btn--lg btn--block" type="submit" id="quote-submit">
+                    <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span id="quote-submit-label">Hablar con un asesor ahora</span>
+                </button>
+                <p class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje. No guardamos tus datos en esta página.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <img src="img/logo-re-power.png" width="883" height="213" loading="lazy" alt="Re-Power, regeneración de acumuladores y baterías">
+                <p>Venta, entrega a domicilio e instalación de baterías para auto sin costo extra. Marcas de calidad y seminuevas con garantía.</p>
+                <a class="btn btn--primary btn--sm" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, quiero cotizar una batería.">
+                    <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg><span>Escríbenos por WhatsApp</span>
+                </a>
+            </div>
+            <nav class="footer__col" aria-label="Secciones">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proceso">Cómo funciona</a></li>
+                    <li><a href="#stock">Marcas y stock</a></li>
+                </ul>
+            </nav>
+            <nav class="footer__col" aria-label="Más información">
+                <h4>Más</h4>
+                <ul>
+                    <li><a href="#promociones">Promociones</a></li>
+                    <li><a href="#diagnostico">Autodiagnóstico</a></li>
+                    <li><a href="#preguntas">Preguntas frecuentes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="footer__col">
+                <h4>Servicio</h4>
+                <ul class="footer__facts">
+                    <li>Entrega a domicilio</li>
+                    <li>Instalación sin costo extra</li>
+                    <li>Diagnóstico en sitio</li>
+                    <li>Seminuevas con garantía</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© <span id="year">2026</span> Re-Power · Regeneración de Acumuladores y Baterías. Todos los derechos reservados.</p>
+            <a href="#inicio" class="footer__top-link">Volver arriba <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+    </div>
+</footer>
+
+<!-- ═══════════ BOTÓN FLOTANTE DE WHATSAPP ═══════════ -->
+<a class="wa-float" id="wa-float" href="https://wa.me/520000000000" data-wa data-wa-msg="Hola Re-Power, necesito ayuda con la batería de mi auto." aria-label="Escríbenos por WhatsApp">
+    <span class="wa-float__tip" id="wa-tip">¿Necesitas batería? Escríbenos</span>
+    <span class="wa-float__btn">
+        <svg class="icon icon--fill" aria-hidden="true"><use href="#i-wa"/></svg>
+    </span>
+</a>
+
+<script src="app.js" defer></script>
+</body>
+</html>
